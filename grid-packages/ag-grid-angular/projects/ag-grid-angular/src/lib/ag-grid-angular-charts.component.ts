@@ -27,10 +27,10 @@ import {
 
 import { AngularFrameworkOverrides } from "./angularFrameworkOverrides";
 import { AngularFrameworkComponentWrapper } from "./angularFrameworkComponentWrapper";
-import { AgGridColumn } from "./ag-grid-column.component";
+import { AgGridChartsColumn } from "./ag-grid-charts-column.component";
 
 @Component({
-    selector: 'ag-grid-angular',
+    selector: 'ag-grid-charts-angular',
     template: '',
     providers: [
         AngularFrameworkOverrides,
@@ -39,7 +39,7 @@ import { AgGridColumn } from "./ag-grid-column.component";
     // tell angular we don't want view encapsulation, we don't want a shadow root
     encapsulation: ViewEncapsulation.None
 })
-export class AgGridAngular implements AfterViewInit {
+export class AgGridChartsAngular implements AfterViewInit {
     // not intended for user to interact with. so putting _ in so if user gets reference
     // to this object, they kind'a know it's not part of the agreed interface
     private _nativeElement: any;
@@ -55,7 +55,7 @@ export class AgGridAngular implements AfterViewInit {
     public api: GridApi;
     public columnApi: ColumnApi;
 
-    @ContentChildren(AgGridColumn) public columns: QueryList<AgGridColumn>;
+    @ContentChildren(AgGridChartsColumn) public columns: QueryList<AgGridChartsColumn>;
 
     constructor(elementDef: ElementRef,
         private viewContainerRef: ViewContainerRef,
@@ -82,7 +82,7 @@ export class AgGridAngular implements AfterViewInit {
 
         if (this.columns && this.columns.length > 0) {
             this.gridOptions.columnDefs = this.columns
-                .map((column: AgGridColumn): ColDef => {
+                .map((column: AgGridChartsColumn): ColDef => {
                     return column.toColDef();
                 });
         }

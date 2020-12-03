@@ -11,7 +11,7 @@ const updateProperties = (callback) => {
 
 const copyFromModuleSource = () => {
     return gulp.src(["**/*"], {cwd: '../../community-modules/angular/projects/ag-grid-angular/src'})
-        .pipe(replace('@ag-grid-community/core', 'ag-grid-community'))
+        .pipe(replace('@ag-grid-community/core', 'ag-grid-community-charts'))
         .pipe(gulp.dest("./projects/ag-grid-angular/src", {cwd: '.'}));
 };
 
@@ -21,7 +21,7 @@ const angularBuild = () => {
 
 const watch = () => {
     gulp.watch([
-            './node_modules/ag-grid-community/lib/**/*',
+            './node_modules/ag-grid-community-charts/lib/**/*',
             './projects/ag-grid-angular/src/lib/**/*'
         ],
         angularBuild);

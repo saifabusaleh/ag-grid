@@ -6,11 +6,11 @@ HTMLButtonElement = typeof HTMLButtonElement === 'undefined' ? function () {} : 
 MouseEvent = typeof MouseEvent === 'undefined' ? function () {} : MouseEvent;
 
 /* Checks for missing gridOptions on agGridAngular */
-const {AgGridAngular, AgGridColumn} = require('./dist/ag-grid-angular/bundles/ag-grid-angular.umd.js');
-const {ComponentUtil} = require("ag-grid-community");
+const {AgGridChartsAngular, AgGridChartsColumn} = require('./dist/ag-grid-angular/bundles/ag-grid-angular-charts.umd.js');
+const {ComponentUtil} = require("ag-grid-community-charts");
 
-const agGridColumnObject = new AgGridColumn();
-const agGridAngularObject = new AgGridAngular(
+const agGridColumnObject = new AgGridChartsColumn();
+const agGridAngularObject = new AgGridChartsAngular(
     {nativeElement: null},
     null,
     null,
@@ -46,7 +46,7 @@ if(missingProperties.length || missingEvents.length) {
 }
 
 /* Checks for missing colDef properties on agGridColumn.ts */
-const {ColDefUtil} = require("ag-grid-community");
+const {ColDefUtil} = require("ag-grid-community-charts");
 
 // colDef properties that dont make sense in an angular context (or are private)
 const skippableProperties = ['template', 'templateUrl', 'pivotKeys', 'pivotValueColumn', 'pivotTotalColumnIds', 'templateUrl'];

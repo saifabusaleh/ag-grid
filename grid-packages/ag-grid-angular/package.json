@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npx gulp copy-from-module-source && ng build --prod && npm run verify-properties && npm run hash",
+    "build": "npx gulp copy-from-module-source && ng build --prod && npm run verify-properties",
     "build-cjs": "npm run build",
     "test": "ng test --watch false --browsers ChromeHeadless",
     "lint": "ng lint",
@@ -40,8 +40,10 @@
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
-    "ag-grid-community": "~24.1.0",
+    "ag-grid-community-charts": "npm:ag-grid-community@^24.1.0",
     "codelyzer": "^5.1.2",
+    "gulp": "^4.0.0",
+    "gulp-replace": "^1.0.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.3.0",
@@ -51,12 +53,10 @@
     "karma-jasmine-html-reporter": "^1.4.2",
     "ng-packagr": "^9.0.0",
     "protractor": "~5.4.3",
+    "replace-in-file": "^4.1.0",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
     "typescript": "~3.7.5",
-    "replace-in-file": "^4.1.0",
-    "typescript-simple": "8.0.6",
-    "gulp": "^4.0.0",
-    "gulp-replace": "^1.0.0"
+    "typescript-simple": "8.0.6"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "name": "ag-grid-angular-charts",
+  "version": "24.1.0",
+  "license": "MIT",
+  "peerDependencies": {
+    "ag-grid-community-charts": "npm:ag-grid-community@^24.1.0",
+    "@angular/common": "^9.0.0 || ^10.0.0",
+    "@angular/core": "^9.0.0 || ^10.0.0"
+  },
+  "main": "bundles/ag-grid-angular-charts.umd.js",
+  "module": "fesm5/ag-grid-angular-charts.js",
+  "es2015": "fesm2015/ag-grid-angular-charts.js",
+  "esm5": "esm5/ag-grid-angular-charts.js",
+  "esm2015": "esm2015/ag-grid-angular-charts.js",
+  "fesm5": "fesm5/ag-grid-angular-charts.js",
+  "fesm2015": "fesm2015/ag-grid-angular-charts.js",
+  "typings": "ag-grid-angular-charts.d.ts",
+  "metadata": "ag-grid-angular-charts.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.10.0"
+  }
+}
